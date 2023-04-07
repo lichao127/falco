@@ -17,6 +17,7 @@ ENV HOME /root
 RUN cp /etc/skel/.bashrc /root && cp /etc/skel/.profile /root
 
 RUN apt-get update \
+  && apt-get upgrade \
 	&& apt-get install -y --no-install-recommends \
 	bash-completion \
 	bc \
